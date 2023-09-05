@@ -53,7 +53,7 @@ async def message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         chat_history[user_id] = get_messages(user_id)
 
         chat_history[user_id].append({"role": "user" , "content": user_msg})
-        response = openai.ChatCompletion.create(model="gpt-4", messages=chat_history[user_id])
+        response = openai.ChatCompletion.create(model=os.getenv('MODEL'), messages=chat_history[user_id])
         response_msg = response.choices[0]['message']['content']
         chat_history[user_id].append({"role": "assistant" , "content": response_msg})
 
