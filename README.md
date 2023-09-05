@@ -1,4 +1,4 @@
-# SmartSlavBot
+# ChatGPT-Telegram-Bot
 A telegram bot which connects to the OpenAI GPT4 model through their official API and implements basic context management of 8k tokens.
 
 ## Installation
